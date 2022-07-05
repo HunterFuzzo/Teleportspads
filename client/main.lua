@@ -10,7 +10,6 @@ Citizen.CreateThread(function()
                 local playerPed = GetPlayerPed(PlayerPedId())
                 local playerPos = GetEntityCoords(playerPed)
                 local getDistance1 = GetDistanceBetweenCoords(playerPos, initialPos, true)
-    
                 local getDistance2 = GetDistanceBetweenCoords(playerPos, teleportedPos, true)
                 local interval = 1
         
