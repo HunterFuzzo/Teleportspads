@@ -3,6 +3,10 @@ game 'gta5'
 
 author 'Azuka'
 
+shared_script {
+    "config.lua"
+} 
+
 client_scripts {
     'client/*.lua'
 }
