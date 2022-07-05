@@ -1,4 +1,4 @@
-# DoubleMarkerTP
+# TeleportsPads
 Two markers to teleport from one to the other
 
 ### How to use ?
