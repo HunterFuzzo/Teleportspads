@@ -6,7 +6,7 @@ end)
 Citizen.CreateThread(function()
     while true do
         for k, initalPos in pairs(Config.Position.Initial) do
-            for k, teleportedPos in pairs(Config.Posirion.Teleported) do
+            for k, teleportedPos in pairs(Config.Position.Teleported) do
                 local playerPed = GetPlayerPed(PlayerPedId())
                 local playerPos = GetEntityCoords(playerPed)
                 local getDistance1 = GetDistanceBetweenCoords(playerPos, initialPos, true)
