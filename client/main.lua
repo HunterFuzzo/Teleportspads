@@ -9,9 +9,9 @@ Citizen.CreateThread(function()
             for k, teleportedPos in pairs(Config.Posirion.Teleported) do
                 local playerPed = GetPlayerPed(PlayerPedId())
                 local playerPos = GetEntityCoords(playerPed)
-                local getDistance1 = GetDistanceBetweenCoords(playerPos, pos1[1], true)
+                local getDistance1 = GetDistanceBetweenCoords(playerPos, initialPos, true)
     
-                local getDistance2 = GetDistanceBetweenCoords(playerPos, pos2[1], true)
+                local getDistance2 = GetDistanceBetweenCoords(playerPos, teleportedPos, true)
                 local interval = 1
         
                 -- first position of the tp marker
