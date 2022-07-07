@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
                 else
                     interval = 1
                     DrawMarker(Config.MarkerType, initalPos, 0.0, 0.0, 0.0, 180.0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor, 100, false, true, 2, false, false, false, false)
-                    if getDistance < 1 then
+                    if getDistance1 < 1 then
                         AddTextEntry("HELP", "Press ~INPUT_CONTEXT~ to teleport")
                         DisplayHelpTextThisFrame("HELP", false)
                 
