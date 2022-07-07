@@ -1,3 +1,7 @@
+ESX = nil
+
+TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end) 
+
 RegisterCommand("coords", function(source, args, rawcommand) -- command to get your coords
     local playerPed = GetPlayerPed(PlayerPedId())
     print(pos.x ..", ".. pos.y ..", ".. pos.z)
@@ -20,9 +24,7 @@ Citizen.CreateThread(function()
                     interval = 1
                     DrawMarker(Config.MarkerType, initalPos, 0.0, 0.0, 0.0, 180.0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor, 100, false, true, 2, false, false, false, false)
                     if getDistance1 < 1 then
-                        AddTextEntry("HELP", "Press ~INPUT_CONTEXT~ to teleport")
-                        DisplayHelpTextThisFrame("HELP", false)
-                
+                        ESX.ShowHelpNotification("Press ~INPUT_CONTEXT~ to teleport")
                         if IsControlJustPressed(0, 51) then
                             SetEntityCoords(playerPed, teleportedPos, true, false, false, false)
                         end
@@ -37,9 +39,7 @@ Citizen.CreateThread(function()
                     interval = 1
                     DrawMarker(Config.MarkerType, teleportedPos, 0.0, 0.0, 0.0, 180.0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor, 100, false, true, 2, false, false, false, false)
                     if getDistance2 < 1 then
-                        AddTextEntry("HELP", "Press ~INPUT_CONTEXT~ to teleport")
-                        DisplayHelpTextThisFrame("HELP", false)
-
+                        ESX.ShowHelpNotification("Press ~INPUT_CONTEXT~ to teleport") 
                         if IsControlJustPressed(0, 51) then
                             SetEntityCoords(playerPed, initialPos, true, false, false, false)
                         end
